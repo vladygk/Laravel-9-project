@@ -7,7 +7,11 @@
             <img src="/img/main.jpg" class="rounded-circle">
         </div>
         <div class ="col-9 p-5"  >
-            <div><h1>{{$user->username}}</h1></div>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h1>{{$user->username}}</h1>
+                <a href="#">Add New Post</a>
+
+            </div>
             <div class="d-flex">
                 <div class="px-4"><strong>153</strong> posts</div>
                 <div class="px-4"><strong>23k</strong> followers</div>
@@ -17,18 +21,13 @@
             </div>
             <div class="pt-4">
                 <div class="fw-bold">
-                   ObamaFoundation
+                    {{$user->profile->title}}
                 </div>
                 <div>
-                    Welcome to a new kind of tension
-                    All across the alien nation
-                    Where everything isn't meant to be okay
-                    In television dreams of tomorrow
-                    We're not the ones who're meant to follow
-                    For that's enough to argue
+                   {{$user->profile->description}}
                 </div>
                 <div>
-                    <a href="#">www.Obama.org</a>
+                    <a href="#"> {{$user->profile->url}}</a>
                 </div>
             </div>
             <div class ="pt-4">
